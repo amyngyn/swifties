@@ -44,4 +44,5 @@ def count():
             is_valid_count = view_id == view_id_param
     if is_valid_count:
         view_count += 1
+    start_new_session()
     return jsonify({'success': is_valid_count})
