@@ -1,11 +1,20 @@
 <html>
   <head>
     <title>Swifties</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
   </head>
   <body>
-    <p>Prove you're a loyal fan by watching these music videos! View count = {{view_count}}</p>
-    <div id="player"></div>
-
+    <div class="container">
+      <div class="left">
+        <h1>Swifties</h1>
+        <p>Prove you're a loyal fan by watching this music video!</p>
+        <div id="player"></div>
+      </div>
+      <div class="right">
+        <p>Hi, Amy.</p>
+        <p>You have {{view_count}} views.</p>
+      </div>
+    </div>
     <script>var view_id = "{{v}}";</script>
     <script src="/counters.js"></script>
   </body>

@@ -1,0 +1,44 @@
+* {
+  font-family: "Helvetica Neue";
+}
+
+h1 {
+  margin: 0px;
+  font-size: 40px;
+}
+
+p {
+  font-size: 24px;
+}
+
+.container {
+  display: flex;
+  margin: 25px 250px 0px 250px;
+}
+
+.container > .right {
+  margin-left: auto;
+}
+
+.right > p {
+  text-align: right;
+  font-size: 32px;
+}
+
+.right > p:first-child {
+  margin-top: 0px;
+}
+
+input[type="text"] {
+  font-size: 28px;
+  padding: 8px 0px 8px 8px;
+}
+
+input[type="submit"] {
+  -webkit-appearance: button;
+  float: right;
+  font-size: 24px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
