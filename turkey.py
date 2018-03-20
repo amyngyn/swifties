@@ -11,17 +11,18 @@ TOKEN_REGEX = re.compile("var id = \"([^']*)\"")
 
 def send_request(method, endpoint, headers=None, data=None):
     url = "%s%s" % (DOMAIN, endpoint)
-    print ("Sending %s to %s" % (method.upper(), url))
+    print ("--- Sending %s to %s" % (method.upper(), url))
     watch_begin = requests.request(method, url, headers=headers, data=data)
     return watch_begin
 
 
 if __name__ == "__main__":
     for i in xrange(100):
+        print("-------------------------------")
         # 1. Get a unique ID from the Swifties server
         js_response = send_request("GET", "/counters.js", None, None)
         token = TOKEN_REGEX.search(js_response.text).group(1)
-        print("Got ID: %s" % token)
+        print("--- Got ID: %s" % token)
 
         # 2. Send a request to the start endpoint
         headers = {'Content-Type': 'application/json'}

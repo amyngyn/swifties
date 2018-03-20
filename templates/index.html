@@ -5,17 +5,20 @@
   </head>
   <body>
     <div class="container">
-      <div class="left">
-        <h1>Swifties</h1>
-        <p>Prove you're a loyal fan by watching this music video!</p>
-        <div id="player"></div>
-      </div>
-      <div class="right">
-        <p>Hi, Amy.</p>
-        <p>You have {{view_count}} views.</p>
-      </div>
+      <h1>Swifties</h1>
+      <p>Prove you're a loyal fan by watching this music video!</p>
+      <div id="player"></div>
+      <p>You have <b>{{view_count}}</b> views.</p>
     </div>
-    <script>var view_id = "{{v}}";</script>
-    <script src="/counters.js"></script>
+    <script src="/static/counters.js"></script>
+    <script src="{{ url_for('static', filename='ads.js') }}"></script>
+    <script src="{{ url_for('static', filename='analytics.js') }}"></script>
+    <script src="{{ url_for('static', filename='animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='checks.js') }}"></script>
+    <script src="{{ url_for('static', filename='leftpad.js') }}"></script>
+    <script src="{{ url_for('static', filename='music_player.js') }}"></script>
+    <script src="{{ url_for('static', filename='tracking.js') }}"></script>
+    <script src="{{ url_for('static', filename='views.js') }}"></script>
+    <script src="{{ url_for('static', filename='youtube.js') }}"></script>
   </body>
 </html>

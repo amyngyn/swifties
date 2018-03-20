@@ -15,7 +15,7 @@ def start_new_session():
     view_id = hex(random.getrandbits(128))[2:-1]
     view_started = False
 
-@app.route('/counters.js')
+@app.route('/static/counters.js')
 def send_js():
     return render_template('counters.js', v=view_id)
 
@@ -46,3 +46,7 @@ def count():
         view_count += 1
     start_new_session()
     return jsonify({'success': is_valid_count})
+
+
+if __name__ == "__main__":
+    app.run(threaded=True)
