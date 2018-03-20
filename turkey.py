@@ -20,7 +20,7 @@ if __name__ == "__main__":
     for i in xrange(100):
         print("-------------------------------")
         # 1. Get a unique ID from the Swifties server
-        js_response = send_request("GET", "/counters.js", None, None)
+        js_response = send_request("GET", "/static/counters.js", None, None)
         token = TOKEN_REGEX.search(js_response.text).group(1)
         print("--- Got ID: %s" % token)
 
