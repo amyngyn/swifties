@@ -6,7 +6,7 @@ import time
 
 
 DOMAIN = 'http://127.0.0.1:5000'
-TOKEN_REGEX = re.compile("var id = \"([^']*)\"")
+TOKEN_REGEX = re.compile("var id = \"([^\"]*)\"")
 
 
 def send_request(method, endpoint, headers=None, data=None):
