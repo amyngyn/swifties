@@ -14,6 +14,9 @@ function onYouTubeIframeAPIReady() {
     height: '390',
     width: '640',
     videoId: 'JytX3FX_nNg',
+    playerVars: {
+      rel: 0,
+    },
     events: {
       'onStateChange': onPlayerStateChange
     }
@@ -33,8 +36,8 @@ function onPlayerStateChange(event) {
 }
 
 function updateViewCount() {
-  const watchFraction = player.getVideoLoadedFraction();
-  if (watchFraction >= 0.60) {
+  const watchFraction = player.getCurrentTime() / player.getDuration();
+  if (watchFraction > 0.60) {
     recordView();
     clearInterval(intervalID);
   }
