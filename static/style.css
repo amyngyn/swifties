@@ -1,5 +1,7 @@
-* {
+body {
   font-family: "Helvetica Neue";
+  background-color: black;
+  color: #E5E5E5;
 }
 
 h1 {
@@ -15,4 +17,8 @@ p {
   display: flex;
   flex-direction: column;
   margin: 25px 0px 0px 25px;
+}
+
+#player {
+  border: 1px solid white;
 }
